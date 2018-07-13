@@ -1,0 +1,17 @@
+{% extends "layouts/default.html" %}
+{% set title = shopName ~ " - shopping with style" %}
+{% set pageTitle = title %}
+{% set bodyClass = "home" %}
+{#{% set benefits = ["Fast!", "Easy!", "Efficient!"] %}#}
+
+{% block content %}
+	<h1>{{ pageTitle }}</h1>
+
+{#{% include "includes/heading.html" %}
+
+<ul>
+    {% for value in benefits %}
+		<li>{{ value }}</li>
+    {% endfor %}
+</ul>#}
+{% endblock %}

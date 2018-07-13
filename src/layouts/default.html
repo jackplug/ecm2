@@ -1,12 +1,18 @@
 <!DOCTYPE html>
+{% set shopName =  "Ecommerce site" %}
 <html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ title }}</title>
 </head>
-<body>
-    {% block content %}{% endblock %}
+<body class="{{ bodyClass }}">
+    {% include "../includes/header.html" %}
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
     
-    <p>Content from our default layout</p>
+    {% include "../includes/footer.html" %}
 </body>
 </html>
