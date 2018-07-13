@@ -1,0 +1,39 @@
+REF: http://xpothemes-sandbox-demo1.mybigcommerce.com/
+
+Components:
+
+HEADER::
+
+1 - Top bar (disappears on scroll as usual; visible on mobile & desktop)
+2 - Nav bar (beneath #1; on scroll becomes fixed; has logo/main menu #3/search #4/basket #5)
+3 - main menu (mega menu desktop / dropdown mobile (scroll only scrolls menu); able to add states (eg New/Hot) to menu items; large image displayed alongside)
+4 - search (overlays entire screen / uses ajax search; desktop and mobile)
+5 - basket (click/tap displays cart contents; displays number of items)
+
+
+FOOTER::
+1 - subscribe newsletter email form
+2 - menu lists: top level cats / info pages / top producers / contact info
+3 - horiz list of links (eg shipping/returns info pages)
+4 - footer: copyright/powered by; payment providers; back to top
+
+
+SIDEBAR::
+Category
+	- subcats; filter (info, producers, color, size, price, ratings, other - seperate sidebar blocks); promo/ad; cms block
+
+
+
+PRODUCT ITEMS::
+
+
+PRODUCT DETAIL::
+
+
+PAGES::
+
+
+CHECKOUT::
+
+
+OTHER::
