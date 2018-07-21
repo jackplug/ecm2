@@ -5,7 +5,7 @@ var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
 gulp.task('default', function() {
-    // place code for your default task here
+    gulp.watch(['src/**/*'], ['htmlbeautify']);
 });
 
 gulp.task('templates', function() {
@@ -14,7 +14,7 @@ gulp.task('templates', function() {
         .pipe(gulp.dest('html')); // output the rendered HTML files to the "html" directory
 });
 
-gulp.task('htmlbeautify', function() {
+gulp.task('htmlbeautify', ['templates'], function() {
     var options = {
         indentSize: 4
     };
