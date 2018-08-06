@@ -27,7 +27,8 @@ gulp.task('htmlbeautify', ['templates'], function() {
 gulp.task('css', function () {
     return gulp.src('./src/styles/*.css')
         .pipe(postcss([
-                require('postcss-partial-import')({ /* options */ })
+                require('postcss-partial-import')({ /* options */ }),
+                require('cssnano')
             ])
         )
         .pipe(gulp.dest('public/styles'));
