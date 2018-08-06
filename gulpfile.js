@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var twig = require('gulp-twig');
 var htmlbeautify = require('gulp-html-beautify');
 var browserSync = require('browser-sync');
-var cssimport = require('gulp-cssimport');
+var postcss = require('gulp-postcss');
 var reload = browserSync.reload;
 
 gulp.task('default', function() {
@@ -25,10 +25,12 @@ gulp.task('htmlbeautify', ['templates'], function() {
 });
 
 gulp.task('css', function () {
-    var options = {};
-    return gulp.src('src/styles/stylesheet.css')
-        .pipe(cssimport(options))
-        .pipe(gulp.dest('public/styles/'));
+    return gulp.src('./src/styles/*.css')
+        .pipe(postcss([
+                require('postcss-partial-import')({ /* options */ })
+            ])
+        )
+        .pipe(gulp.dest('public/styles'));
 });
 
 gulp.task('serve', function() {
