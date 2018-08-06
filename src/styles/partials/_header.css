@@ -1,1 +1,12 @@
-body { background: var(--yel); }
+.header-primary {
+	background-color: var(--primary-color);
+	color: var(--primary-color-inverse);
+}
+
+.header-primary a:link,
+.header-primary a:visited,
+.header-primary a:hover,
+.header-primary a:focus,
+.header-primary a:active {
+	color: var(--primary-color-inverse);
+}

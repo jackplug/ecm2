@@ -1,1 +1,86 @@
-:root { --yel: yellow;  }
+:root {
+	--primary-color: #6f42c1;
+	--primary-color-inverse: #fff;
+
+	--base-font-size: 18px;
+	--base-line-height: 1.5;
+	--base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji","Segoe UI Symbol";
+
+	--h1-font-size: 48px;
+	--h1-line-height: 1.05;
+	--h2-font-size: 36px;
+	--h2-line-height: 1.25;
+	--h3-font-size: 28px;
+	--h3-line-height: 1.25;
+	--h4-font-size: 20px;
+	--h4-line-height: 1.3;
+
+	--generic-margin: calc(var(--base-font-size) * var(--base-line-height));
+
+	/* NOTE: you cannot use these custom properties with the media query itself:
+	   @media (min-width: var(--breakpoint-xs) will not work */
+	--breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+}
+
+@media (max-width: 768px) { /* --breakpoint-md */
+	:root {
+		--h1-font-size: 40px;
+		--h1-line-height: 1.125;
+		--h2-font-size: 32px;
+		--h3-font-size: 24px;
+		--h4-font-size: 20px;
+		--h4-line-height: 1.2;
+	}
+}
+
+@media (max-width: 576px) { /* --breakpoint-sm */
+	:root {
+		--base-line-height: 1.2;
+
+		--h1-font-size: 32px;
+		--h1-line-height: 1.15;
+		--h2-font-size: 26px;
+		--h2-line-height: 1.15;
+		--h3-font-size: 22px;
+		--h3-line-height: 1.14;
+		--h4-font-size: 18px;
+		--h4-line-height: 1.125;
+	}
+}
+
+/*
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+*/
