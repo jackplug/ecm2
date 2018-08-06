@@ -2,10 +2,11 @@ var gulp = require('gulp');
 var twig = require('gulp-twig');
 var htmlbeautify = require('gulp-html-beautify');
 var browserSync = require('browser-sync');
+var cssimport = require('gulp-cssimport');
 var reload = browserSync.reload;
 
 gulp.task('default', function() {
-    gulp.watch(['src/**/*'], ['htmlbeautify']);
+    gulp.watch(['src/**/*'], ['css', 'htmlbeautify']);
 });
 
 gulp.task('templates', function() {
@@ -21,6 +22,13 @@ gulp.task('htmlbeautify', ['templates'], function() {
     gulp.src('./html/*.html')
         .pipe(htmlbeautify(options))
         .pipe(gulp.dest('./public/'));
+});
+
+gulp.task('css', function () {
+    var options = {};
+    return gulp.src('src/styles/stylesheet.css')
+        .pipe(cssimport(options))
+        .pipe(gulp.dest('public/styles/'));
 });
 
 gulp.task('serve', function() {
