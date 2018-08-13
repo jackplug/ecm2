@@ -1,0 +1,22 @@
+/*Refs: https://cdn.rawgit.com/danklammer/bytesize-icons/master/examples/bytesize-styles.html*/
+
+.icon-set {
+	display: none;
+}
+
+.icon-set-icon {
+	stroke: currentColor;
+	stroke-width: 0.5px;
+	stroke-linecap: butt;
+	stroke-linejoin: miter;
+/*    stroke-linecap: round;
+    stroke-linejoin: round;*/
+	fill: none;
+	width: 1em;
+	height: 1em;
+}
+
+.icon-set-icon,
+.icon-set-icon symbol {
+	overflow: visible;
+}
