@@ -10,11 +10,11 @@
 <body class="home">
     <header>
 	<div class="header-primary">
-	<section class="header-first-bar-user">
+	<section class="header-primary-component header-user">
     <p><a href="/sign-in.html" data-modal data-modaltype="html" data-modalcontent="signInHeader">Sign in</a></p>
 </section>
 
-	<section class="header-first-bar-promo">
+	<section class="header-primary-component header-promo">
     <ul data-notices>
         <li>Call us at <a href="tel:(012)-345-6789">(012)-345-6789</a></li>
         <li>Merry Christmas &amp; Happy New Year 2018: 50% OFF. <a href="#demo_url">Shop Now</a></li>
@@ -22,15 +22,15 @@
     </ul>
 </section>
 
-	<section class="header-first-bar-gift-certificates">
+	<section class="header-primary-component header-gift-certificates">
     <p><a href="/gift-certificates.html" class="i-gift">Gift certificates</a></p>
 </section>
 
-	<section class="header-first-bar-wish-lists">
+	<section class="header-primary-component header-wish-lists">
     <p><a href="/wish-lists.html" class="i-heart">Wish lists</a></p>
 </section>
 
-	<section class="header-first-bar-currency">
+	<section class="header-primary-component header-currency">
     <p><a href="/currency.html" data-modal data-modaltype="html" data-modalcontent="currencyHeader" class="i-flag-cs">CZK</a></p>
 </section></div>
 
@@ -39,7 +39,7 @@
 			ECOMM1
 	</h1>
 
-	<div class="navigation-primary header-secondary-component">
+	<section class="navigation-primary header-secondary-component">
 	<label for="NavPrimaryTrigger">Menu</label>
 	<input type="checkbox" id="NavPrimaryTrigger">
 
@@ -228,10 +228,10 @@
 			</li>
 		</ul>
 	</nav>
-</div>
+</section>
 
-	<div class="header-secondary-component header-search">
-	<label for="SearchTrigger">Search</label>
+	<section class="header-secondary-component header-search">
+	<label for="SearchTrigger">Search<svg class="icon-set-icon"><use xlink:href="#i-search" /></svg></label>
 	<input type="checkbox" id="SearchTrigger">
 	<form action="/search/" method="get" enctype="text/plain" accept-charset="UTF-8" class="modal-content">
 	    <fieldset>
@@ -241,9 +241,9 @@
 			<button type="submit" name="submit">Go!</button>
 		</fieldset>	
 	</form>
-</div>
-	<div class="header-secondary-component header-cart">
-	<label for="CartTrigger">Cart</label>
+</section>
+	<section class="header-secondary-component header-cart">
+	<label for="CartTrigger">Cart<svg class="icon-set-icon"><use xlink:href="#i-cart" /></svg></label>
 	<input type="checkbox" id="CartTrigger">
 	<span class="header-general-label cart-items">0</span>
 	<div id="headerCart" class="modal-content">
@@ -254,7 +254,7 @@
 	    	</div>
 	    </div>
 	</div>
-</div></div></header>
+</section></div></header>
 
     <main>
         	<p class="h1">Ecommerce site - shopping with style IGNORE</p>
@@ -270,5 +270,9 @@
 
 		FOOTER
 </footer>
+    <script src="js/basic-oldschool-ajax-fetch.js"></script>
+<script>
+	getFile('img/svg/bytesize-inline.svg', 'icon-set');
+</script>
 </body>
 </html>
