@@ -1,0 +1,44 @@
+.navigation-primary-label {
+	font-size: 0.75em;
+	line-height: 1;
+	display: inline-block;
+	padding: 3px 4px;
+	position: absolute;
+	bottom: 100%;
+	right: 0;
+	background: #000;
+	color: #fff;
+	margin-bottom: 2px;
+	text-transform: none;
+}
+
+.navigation-primary-label::after {
+	content: '';
+	border-top: 4px solid #000;
+	border-right: 4px solid transparent;
+	position: absolute;
+	top: 100%;
+	left: 4px;
+}
+
+.navigation-primary-label.new {
+	background: #343a40; /* TODO colour variable */
+}
+
+.navigation-primary-label.new::after {
+	border-top-color: #343a40; /* TODO colour variable */
+}
+
+.navigation-primary-label.hot {
+	background: #dc3545; /* TODO colour variable */
+}
+
+.navigation-primary-label.hot::after {
+	border-top-color: #dc3545; /* TODO colour variable */
+}
+
+/*
+
+navigation-primary-label new
+
+navigation-primary-label hot*/

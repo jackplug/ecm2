@@ -1,0 +1,96 @@
+@import "_category-navigation-labels";
+
+.navigation-primary-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	height: 100%;
+}
+
+.navigation-primary-list > * {
+	margin-bottom: 0;
+	display: flex;
+	align-items: center;
+}
+
+.navigation-primary-list > * + * {
+	border-left: 1px solid #ecf8f1; /* TODO - color vars */
+}
+
+.navigation-primary-list > * > a {
+	min-height: 1px;
+	padding: 0 1vw;
+	position: relative;
+	font-size: 0.8em;
+	text-transform: uppercase;
+}
+
+.navigation-primary-list > * > a:link,
+.navigation-primary-list > * > a:visited {
+	color: var(--base-text-color);
+	text-decoration: none;
+}
+
+.navigation-primary-list > * > a:hover,
+.navigation-primary-list > * > a:focus,
+.navigation-primary-list > * > a:active {
+	color: #000;
+	text-decoration: none;
+}
+
+@media (max-width: 1200px) {/* --breakpoint-xl */
+	.navigation-primary-list > * > a {
+		padding: 0 1em;
+	}
+}
+
+.navigation-primary-list > * > a:first-child:not(:last-child)::after {
+	border-color: #1f1a3a; /* TODO colour variable */
+	border-style: solid;
+	border-width: 0 1px 1px 0;
+	content: '';
+	display: block;
+	height: 6px;
+	width: 6px;
+	position: absolute;
+}
+
+@media (min-width: 992px) { /*--breakpoint-lg: */
+	.navigation-primary-list > * > a:first-child:not(:last-child)::after {
+		top: 100%;
+		left: 50%;
+		margin-left: -3px;
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+		-webkit-transition: transform 0.3s ease 0s;
+		transition: transform 0.3s ease 0s;
+	}
+}
+
+.navigation-primary-list > * > .navigation-primary-subcategory {
+	display: none;
+	position: absolute;
+}
+
+@media (min-width: 992px) { /*--breakpoint-lg: */
+	.navigation-primary-list > * > .navigation-primary-subcategory {
+		top: 100%;
+	}
+}
+
+@media (min-width: 992px) { /*--breakpoint-lg: */
+	.navigation-primary {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.navigation-primary.navigation-primary [id$="Trigger"],
+	.navigation-primary.navigation-primary [for$="Trigger"] {
+		display: none;
+	}
+
+	.navigation-primary.navigation-primary nav {
+		display: block;
+	}
+}

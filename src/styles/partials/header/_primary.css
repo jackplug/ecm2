@@ -3,6 +3,7 @@
 	color: var(--primary-color-inverse);
 
 	margin: -1vw -1vw 0;
+	padding: 0 1vw;
 	display: flex;
 }
 

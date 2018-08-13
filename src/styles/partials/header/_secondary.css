@@ -1,0 +1,31 @@
+@import "components/_category-navigation";
+
+.header-secondary {
+	margin: 0 -1vw;
+	padding: 0 1vw;
+	display: flex;
+	justify-content: space-between;
+}
+
+.header-secondary-component {
+	margin-bottom: 0;
+	padding: 1vw 0;
+}
+
+@media (max-width: 1200px) {/* --breakpoint-xl */
+	.header-secondary-component {
+		padding: 1em 0;
+	}
+}
+
+.header-secondary-component > * {
+	height: 100%;
+}
+
+.header-secondary [id$="Trigger"] ~ * {
+	display: none;
+}
+
+.header-secondary [for$="Trigger"] {
+	display: block;
+}

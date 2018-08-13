@@ -1,0 +1,13 @@
+{% if bodyClass == "home" %}
+	<h1 class="header-secondary-component header-logo">
+{% else %}
+	<div class="header-secondary-component header-logo">
+		<a href="/">
+{% endif %}
+			ECOMM1
+{% if bodyClass == "home" %}
+	</h1>
+{% else %}
+		</a>
+	</div>
+{% endif %}

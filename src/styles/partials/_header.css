@@ -1,1 +1,13 @@
-@import "header/_primary"
+@import "header/_primary";
+@import "header/_secondary";
+
+[id$="Trigger"] {
+	position: absolute;
+	height: 1px;
+	width: 1px;
+	border: none;
+	background: none;
+	opacity: 0;
+	visibility: hidden;
+	overflow: hidden;
+}
