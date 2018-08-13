@@ -5,11 +5,12 @@
 	padding: 3px 4px;
 	position: absolute;
 	bottom: 100%;
-	right: 0;
+	right: 5px;
 	background: #000;
 	color: #fff;
 	margin-bottom: 2px;
 	text-transform: none;
+	filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.3));
 }
 
 .navigation-primary-label::after {

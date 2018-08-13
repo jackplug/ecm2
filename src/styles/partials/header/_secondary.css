@@ -10,6 +10,8 @@
 .header-secondary-component {
 	margin-bottom: 0;
 	padding: 1vw 0;
+	display: flex;
+	align-items: center;
 }
 
 @media (max-width: 1200px) {/* --breakpoint-xl */
@@ -28,4 +30,24 @@
 
 .header-secondary [for$="Trigger"] {
 	display: block;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0;
+	text-align: center;
+	height: 38px;
+	width: 38px;
+	border: 0.5px solid var(--primary-color);
+	margin-left: 5px;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+.header-secondary [for$="Trigger"] .icon-set-icon {
+	font-size: var(--base-font-size);
+	color: var(--primary-color);
+}
+
+.header-secondary-component:last-child [for$="Trigger"] {
+	margin-right: 0;
 }
