@@ -25,6 +25,7 @@ Category
 
 
 PRODUCT ITEMS::
+-idea - store all content in a json object then populate the main pages statically (no JS reqd). Would also allow for ajax search, filters, etc
 
 
 PRODUCT DETAIL::
