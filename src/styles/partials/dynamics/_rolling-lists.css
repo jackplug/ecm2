@@ -1,47 +1,31 @@
-[class*="rolling-list"] {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-
+.rolling-list-container {
     line-height: 1.4em;
     height: 1.4em;
     overflow: hidden;
-    position: relative;
-    display: flex;
-    flex-direction: column;
+}
+
+.rolling-list-pane {
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0 0 1.4em;
+    padding: 0;
+    height: 1.4em;
+    list-style: none;
+}
+
+.rolling-list-pane > * {
+    margin-bottom: 0;
+    height: 1.4em;
+    transform: translate3d(0, 200%, 0);
+    position: absolute;
+}
+
+.rolling-list-pane > .rolling-list-pane-start {
     transform: translate3d(0, 0, 0);
+    transition: transform 1s ease-out;
 }
 
-[class*="rolling-list"] > * {
-	/*position: relative;*/
-	margin-bottom: 0;
-	/*height: 1.5em;*/
-	animation-name: rolling-list-vertical;
-    animation-duration: 3s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-play-state: running;
-    animation-delay: var(--animation-offset)s;
-}
-
-[class*="rolling-list"]:hover > * {
-	animation-play-state: paused;
-}
-/* @TODO: Not working correctly
-   also see https://www.google.cz/search?q=css+animation+start+point */
-@keyframes rolling-list-vertical {
-    0% {
-        transform: translateY(calc(var(--animation-offset) * 100%));
-        /*order: 1;*/
-    }
-
-    50% {
-        transform: translateY(0);
-        /*order: 1;*/
-    }
-
-    100% {
-        transform: translateY(calc(var(--animation-offset) * -100%));
-        /*order: -1;*/
-    }
+.rolling-list-pane > .rolling-list-pane-end {
+    transform: translate3d(0, -200%, 0);
+    transition: transform 1s 2s ease-in;
 }
