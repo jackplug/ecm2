@@ -25,6 +25,8 @@
 
 	--header-bar-secondary-height: 76px;
 
+	/*--border-color*/
+
 	/* NOTE: you cannot use these custom properties with the media query itself:
 	   @media (min-width: var(--breakpoint-xs) will not work */
 	--breakpoint-xs: 0;

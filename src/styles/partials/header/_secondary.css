@@ -16,12 +16,6 @@
 	align-items: center;
 }
 
-@media (max-width: 1200px) {/* --breakpoint-xl */
-	.header-secondary-component {
-		padding: 1em 0;
-	}
-}
-
 .header-secondary-component > * {
 	height: 100%;
 }
