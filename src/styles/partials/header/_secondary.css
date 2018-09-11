@@ -5,6 +5,8 @@
 	padding: 0 1vw;
 	display: flex;
 	justify-content: space-between;
+	height: var(--header-bar-secondary-height);
+	position: relative;
 }
 
 .header-secondary-component {

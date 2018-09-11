@@ -23,6 +23,8 @@
 	--header-bar-font-size: 0.65em;
 	--header-bar-font-weight: 600;
 
+	--header-bar-secondary-height: 76px;
+
 	/* NOTE: you cannot use these custom properties with the media query itself:
 	   @media (min-width: var(--breakpoint-xs) will not work */
 	--breakpoint-xs: 0;
