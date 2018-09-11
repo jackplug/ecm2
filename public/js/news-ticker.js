@@ -4,6 +4,10 @@ var tickerItems = document.querySelectorAll('.rolling-list-pane > *'),
 	processTransitionEnd = function (event) {
 		var element = event.target,
 			classes = element.classList;
+
+		if (!/transform/.test(event.propertyName)) {
+			return;
+		}
 		
 		if (classes.contains('rolling-list-pane-start')) {
 			element.classList.remove('rolling-list-pane-start');

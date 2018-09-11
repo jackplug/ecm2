@@ -18,14 +18,18 @@
     height: 1.4em;
     transform: translate3d(0, 200%, 0);
     position: absolute;
+        opacity: 0;
 }
 
 .rolling-list-pane > .rolling-list-pane-start {
     transform: translate3d(0, 0, 0);
-    transition: transform 1s ease-out;
+    transition: transform 1s ease-out, opacity 1s ease-out;
+        opacity: 1;
 }
 
 .rolling-list-pane > .rolling-list-pane-end {
     transform: translate3d(0, -200%, 0);
-    transition: transform 1s 2s ease-in;
+    transition: transform 1s 2s ease-in, opacity 0.8s 2s ease-in;
+
+    opacity: 0;
 }
