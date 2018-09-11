@@ -1,5 +1,9 @@
 @import "_category-navigation-labels";
 
+.navigation-primary.navigation-primary {
+	padding: 0;
+}
+
 .navigation-primary-list {
 	list-style: none;
 	margin: 0;
@@ -12,7 +16,10 @@
 	margin-bottom: 0;
 	display: flex;
 	align-items: center;
-	padding: 1vw 0 0;
+	padding: 1vw 0 0; /* make sure that labels are correctly displayed */
+}
+
+.navigation-primary-list > * > *:first-child {
 	margin-top: -1vw;
 }
 
@@ -29,11 +36,22 @@
 
 .navigation-primary-list > * > a {
 	min-height: 1px;
-	padding: 0 1vw;
+	padding: 0 1.5vw;
 	position: relative;
 	font-size: var(--header-bar-font-size);
 	font-weight: var(--header-bar-font-weight);
 	text-transform: uppercase;
+}
+
+.navigation-primary-list > * > a:before {
+	content: '';
+	display: block;
+	left: 0;
+	right: 0;
+	height: 40px;
+	top: 50%;
+	position: absolute;
+	transform: translateY(-50%);
 }
 
 .navigation-primary-list > * > a:link,
@@ -71,8 +89,8 @@
 		top: 100%;
 		left: 50%;
 		margin-left: -3px;
-		-webkit-transform: translateY(-2px) rotate(45deg);
-		transform: translateY(-2px) rotate(45deg);
+		-webkit-transform: translate3d(0, 0, 0) rotate(45deg);
+		transform: translate3d(0, 0, 0) rotate(45deg);
 		-webkit-transition: transform 0.3s ease 0s;
 		transition: transform 0.3s ease 0s;
 	}
@@ -80,8 +98,8 @@
 	.navigation-primary-list > * > a:hover:first-child:not(:last-child)::after,
 	.navigation-primary-list > * > a:focus:first-child:not(:last-child)::after,
 	.navigation-primary-list > * > a:active:first-child:not(:last-child)::after {
-		-webkit-transform: translateY(0) rotate(45deg);
-		transform: translateY(0) rotate(45deg);
+		-webkit-transform: translate3d(0, 5px, 0) rotate(45deg);
+		transform: translate3d(0, 5px, 0) rotate(45deg);
 	}
 }
 
