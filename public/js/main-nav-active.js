@@ -5,7 +5,7 @@
 	var navElements = document.querySelectorAll('header .navigation-primary-list > li'),
 		docRoot = document.querySelector('html');
 
-	for (i = 0, neLen = navElements.length; i < neLen; i++ ) {
+	for (var i = 0, neLen = navElements.length; i < neLen; i++ ) {
 		navElements[i].addEventListener('mouseover', function () {
 			docRoot.classList.add('main-nav-active');
 		});

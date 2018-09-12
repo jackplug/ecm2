@@ -1,6 +1,6 @@
-/*@import "_category-navigation-labels";
+@import "_category-navigation-labels";
 
-Change basis page behaviour*/
+/* Change basis page behaviour*/
 .main-nav-active,
 .main-nav-active body {
 	overflow: hidden;
@@ -121,6 +121,7 @@ Change basis page behaviour*/
 	box-sizing: border-box;
 	left: 0;
 	width: 100%;
+	width: calc(25% * var(--cols, 4));
 	display: flex;
 	padding: 2vw;
 }
