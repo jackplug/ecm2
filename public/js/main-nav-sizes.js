@@ -8,10 +8,6 @@
 
 		cols = 1;
 
-		// if (subNavElements.length > 1) {
-		// 	cols++;
-		// }
-
 		if (subNavElements.length > 3) {
 			cols++;
 		}
@@ -19,7 +15,7 @@
 		if (subNavElements.length > 5) {
 			cols++;
 		}
-console.log('promo', promo);
+
 		if (promo) {
 			cols++;
 		}
