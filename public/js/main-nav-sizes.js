@@ -6,18 +6,14 @@
 		var subNavElements = navElements[i].parentNode.querySelectorAll('.navigation-primary-subcategory > ul > li > ul'),
 			promo = navElements[i].querySelector('.navigation-primary-promo');
 
-		cols = 1;
-
-		if (subNavElements.length > 3) {
-			cols++;
-		}
-
-		if (subNavElements.length > 5) {
-			cols++;
-		}
+		cols = subNavElements.length || 1;
 
 		if (promo) {
 			cols++;
+		}
+
+		if (cols > 4) {
+			cols = 4;
 		}
 
 		navElements[i].style.setProperty('--cols', cols);
