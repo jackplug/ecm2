@@ -1,5 +1,4 @@
 /*Refs: https://cdn.rawgit.com/danklammer/bytesize-icons/master/examples/bytesize-styles.html*/
-
 .icon-set {
 	display: none;
 }
@@ -12,11 +11,25 @@
 /*    stroke-linecap: round;
     stroke-linejoin: round;*/
 	fill: none;
-	width: 1em;
-	height: 1em;
+/*	width: 1em;
+	height: 1em;*/
+	max-height: 54%;
+	max-width: 54%;
 }
 
 .icon-set-icon,
 .icon-set-icon symbol {
 	overflow: visible;
+}
+
+/* behaviour */
+.icon-set-icon + .icon-set-icon {
+	display: none;
+}
+.trigger-input:checked + label .icon-set-icon:first-of-type:not(:last-of-type) {
+	display: none;
+}
+
+.trigger-input:checked + label .icon-set-icon + .icon-set-icon {
+	display: block;
 }

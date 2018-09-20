@@ -45,8 +45,8 @@
             </h1>
 
             <section class="navigation-primary header-secondary-component">
-                <label for="NavPrimaryTrigger">Menu</label>
-                <input type="checkbox" id="NavPrimaryTrigger">
+                <input type="checkbox" id="NavPrimaryTrigger" class="trigger-input">
+                <label for="NavPrimaryTrigger">Menu<svg class="icon-set-icon"><use xlink:href="#i-menu" /></svg><svg class="icon-set-icon"><use xlink:href="#i-close" /></svg></label>
 
                 <nav>
                     <ul class="navigation-primary-list">
@@ -246,8 +246,8 @@
             </section>
 
             <section class="header-secondary-component header-search">
+                <input type="checkbox" id="SearchTrigger" class="trigger-input">
                 <label for="SearchTrigger">Search<svg class="icon-set-icon"><use xlink:href="#i-search" /></svg></label>
-                <input type="checkbox" id="SearchTrigger">
                 <form action="/search/" method="get" enctype="text/plain" accept-charset="UTF-8" class="modal-content">
                     <fieldset>
                         <legend>Search</legend>
@@ -258,8 +258,8 @@
                 </form>
             </section>
             <section class="header-secondary-component header-cart">
+                <input type="checkbox" id="CartTrigger" class="trigger-input">
                 <label for="CartTrigger">Cart<svg class="icon-set-icon"><use xlink:href="#i-cart" /></svg></label>
-                <input type="checkbox" id="CartTrigger">
                 <span class="header-general-label cart-items">0</span>
                 <div id="headerCart" class="modal-content">
                     <h2 class="header-cart-heading">Shopping cart: 0 items</h2>
